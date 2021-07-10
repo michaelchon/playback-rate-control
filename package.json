@@ -1,0 +1,25 @@
+{
+    "name": "playback_rate_control",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "css-build": "node-sass --source-map true --output options_page/assets/css options_page/assets/sass",
+        "css-watch": "npm run css-build -- --watch",
+        "react-watch": "cd options_page/assets && npx babel --watch jsx --out-dir js/components --presets react-app/prod",
+        "start": "npm-run-all --parallel css-watch react-watch"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "babel-cli": "^6.26.0",
+        "babel-preset-react-app": "^3.1.2",
+        "bulma": "^0.9.1",
+        "node-sass": "^5.0.0",
+        "npm-run-all": "^4.1.5"
+    },
+    "dependencies": {
+        "normalize.css": "^8.0.1"
+    }
+}
